@@ -1,0 +1,39 @@
+app:
+  name: sage
+  version: v1.0.0
+  component: sage
+  debug: true
+  env: dev
+
+#root user
+root:
+  account: ${ROOT_ACCOUNT:root}
+  email: ${ROOT_EMAIL:root@email.com}
+  password: ${root_password:abcd123456}
+
+server:
+  grpc:
+    addr: "0.0.0.0:${GRPC_PORT:7001}"
+    timeout: 60000
+
+
+database:
+  host: ${DB_HOST:localhost:3306}
+  user: ${DB_USER:root}
+  password: ${DB_PASSWORD:abcd123456}
+  name: ${DB_NAME:fo_accountx}
+
+log:
+  type: general
+  level: INFO
+
+jaeger:
+  endpoint: http://127.0.0.1:14268/api/traces
+
+dbtables:
+  tables:
+    fo_accountx: [user,wx_access]
+    foqianx: [baibai,pictures]
+
+
+outfilename: schema

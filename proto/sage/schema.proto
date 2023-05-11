@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package sage.v1;
+
+option go_package = "github.com/dreaminglwj/protocol/proto/sage/v1;sage";
+
+//用户相关接口
+service Schema {
+  rpc GetSchema (GetSchemaRequest) returns (GetSchemaReply);
+}
+
+
+message GetSchemaRequest {
+}
+
+message GetSchemaReply {
+}
